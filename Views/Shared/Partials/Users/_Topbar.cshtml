@@ -1,0 +1,33 @@
+<section class="top-bar">
+    <div class="container">
+        <div class="row gy-2 align-items-center">
+            <div class="col-lg-2 col-sm-12 col-12">
+                <a asp-controller="Home" asp-action="Index" class="navbar-brand"><i class="fa-solid fa-truck-fast"></i>
+                    E-Commerce</a>
+            </div>
+            <div class="col-lg-8 col-sm-8 col-8">
+                <form asp-controller="Product" asp-action="List" method="get">
+                    <div class="input-group">
+                        <input name="q" type="text" placeholder="Arama yapınız" class="form-control"
+                            value="@ViewData["q"]">
+                        <button type="submiit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-lg-2 col-sm-4 col-4 order-lg-last">
+                <div class="text-end">
+                    <a href="#" class="btn">
+                        <i class="fa fa-user"></i>
+                    </a>
+                    <a href="#" class="btn">
+                        <i class="fa fa-heart"></i>
+                    </a>
+                    <a href="shopping-cart.html" class="btn">
+                        <i class="fa fa-shopping-cart"></i>
+                    </a </div>
+                </div>
+
+            </div>
+        </div>
+</section>

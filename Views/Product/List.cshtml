@@ -1,0 +1,21 @@
+@model List<Product>
+
+<section>
+    <div class="container mt-3">
+        @if (Model.Count == 0)
+        {
+            <div class="col-12">
+                <div class="alert alert-warning">Ürün bulunamadı.</div>
+            </div>
+        }
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+            @foreach (var product in Model)
+            {
+                <div class="col-">
+                    @await Html.PartialAsync("Partials/Users/_ProductCard", product)
+                </div>
+            }
+
+        </div>
+    </div>
+</section>

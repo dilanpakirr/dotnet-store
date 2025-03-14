@@ -1,0 +1,29 @@
+﻿@model List<Product>
+
+<section>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-3">
+                @await Html.PartialAsync("Partials/Users/_Menu", ViewData["categories"])
+            </div>
+            <div class="col-9">
+                @await Component.InvokeAsync("Slide")
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<section>
+    <div class="container mt-3">
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+            @foreach (var product in Model)
+            {
+                <div class="col-">
+                    @await Html.PartialAsync("Partials/Users/_ProductCard", product)
+                </div>
+            }
+
+        </div>
+    </div>
+</section>
